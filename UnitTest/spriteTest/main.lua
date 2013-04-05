@@ -12,6 +12,7 @@ local sprites={
 		color=Color.WHITE,
 		url="boy.fst",
 		animation="walk",
+		scale=3
 	},
 	{
 		x=100,
@@ -19,6 +20,7 @@ local sprites={
 		color=Color.RED,
 		url="boy.fst",
 		animation="strike",
+		scale=0.5
 	},
 	{
 		x=320,
@@ -33,6 +35,7 @@ local sprites={
 		color=Color.BLUE,
 		url="boy.fst",
 		animation="throw",
+		scale=4
 	},
 	{
 		x=140,
