@@ -1,5 +1,9 @@
 local director =share:director();
 local render=share:render()
+local scheduler=share:scheduler()
+scheduler:setFps(60)
+
+--director:setAutoSwapBuffers(false);
 
 
 -- create layer */
@@ -11,7 +15,8 @@ local quad2d= Quad2D:create("grass.png",Rect2D(-100,-100,200,200))
 quad2d:setPosition(500,400,0)
 quad2d.data={
 	onUpdate=function(self,dt)
-		self:rotateZ(dt/1000*60)
+		print("update:"..dt)
+		self:rotateZ(dt/1000*10)
 	end 
 }
 
@@ -24,7 +29,7 @@ c_quad:setPosition(300,-300,0);
 local tree1 =Quad2D:create("tree.png")
 tree1.data={
 	onUpdate=function(self,dt)
-		self:rotateZ(dt/1000*80)
+		self:rotateZ(dt/1000*30)
 	end 
 }
 tree1:setPosition(200,200,0)
@@ -32,7 +37,7 @@ tree1:setPosition(200,200,0)
 local tree2 =Quad2D:create("tree2.png")
 tree2.data={
 	onUpdate=function(self,dt)
-		self:rotateZ(dt/1000*100)
+		self:rotateZ(dt/1000*10)
 	end 
 }
 tree2:setPosition(200,200,0)
@@ -44,7 +49,7 @@ local label=LabelTTF:create("This Is A Font",font);
 label:setPosition(-300,300,0)
 label.data={
 	onUpdate=function(self,dt)
-		self:rotateZ(dt/1000*200)
+		self:rotateZ(dt/1000*10)
 	end 
 	
 }
