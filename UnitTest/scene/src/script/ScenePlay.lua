@@ -34,7 +34,7 @@ end
 
 local function Quad_New()
 	local litter =alpahbet[math.random(1,#alpahbet)]
-	print (litter)
+	--print (litter)
 	assert(font)
 	local quad=LabelTTF:create(litter,font)
 	local posx=math.random(0,960)
@@ -46,7 +46,7 @@ local function Quad_New()
 	quad:setPosition(posx,posy)
 	quad:setColor(color)
 	quad:setAlign(LabelTTF.ALIGN_H_CENTER,LabelTTF.ALIGN_V_CENTER)
-	print(string.format("posx:%f,posy:,%f,speedx:%f,speedy:%f",posx,posy,speedx,speedy))
+--	print(string.format("posx:%f,posy:,%f,speedx:%f,speedy:%f",posx,posy,speedx,speedy))
 
 	quad.data={
 		posx=posx,
@@ -69,16 +69,22 @@ local function PlayLayer_OnTouchBegin(self,x,y)
 	local quads=data.quads
 	x,y=self:toLayerCoord(x,y)
 
+	local need_move={}
 	for key,value  in pairs(quads) do 
 		if key:hit2D(x,y) then 
 			key:dead()
-			quads.key=nil
+			need_move[key]=key
 			data.score=data.score+10
 			local new_quad=Quad_New()
 			self:add(new_quad)
 			quads[new_quad]=new_quad
 		end
 	end
+
+	for key,value in pairs(need_move) do 
+		quads[key]=nil
+	end
+
 	data.scoreLabel:setString("Score:"..data.score)
 	return true;
 end

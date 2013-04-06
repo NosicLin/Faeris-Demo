@@ -81,14 +81,24 @@ local function StartLayer_SelectTouchEnd(self,x,y)
 	local focus=data.focus
 	self:setFocus(nil)
 
+	local scene = share:director():current()
 	if focus == data.play then 
 		data.nextScene=ScenePlay_New() 
+		local fade_layer=ColorLayer:create(Color(0,0,0,0))
+		data.fadeLayer=fade_layer
+		data.fadeAlpha=0
+		scene:push(fade_layer)
 		util.changeCallBack(self,StartLayer_mExitCallBack)
+
 	elseif  focus ==data.setting then 
 		data.nextScene=SceneAbout_New()
+		local fade_layer=ColorLayer:create(Color(0,0,0,0))
+		data.fadeLayer=fade_layer
+		data.fadeAlpha=0
+		scene:push(fade_layer)
+
 		util.changeCallBack(self,StartLayer_mExitCallBack)
 	elseif focus == data.quit then 
-		local scene = share:director():current()
 		local facd_layer=ColorLayer:create(Color(55,55,55,200))
 		scene:push(facd_layer)
 		scene:push(QuitLayer_New())
@@ -120,9 +130,19 @@ local function StartLayer_UpdateSelect(self,dt)
 end
 
 local function StartLayer_ExitUpdate(self,dt)
-	local director=share:director()
-	director:push()
-	director:run(self.data.nextScene)
+	local data=self.data
+	data.fadeAlpha=data.fadeAlpha+dt/1000*255
+	if data.fadeAlpha >255 then 
+		data.fadeAlpha=nil
+		data.fadeLayer=nil
+		local director=share:director()
+		local scene=director:current()
+		scene:pop()
+		director:push()
+		director:run(self.data.nextScene)
+	else 
+		data.fadeLayer:setColor(Color(0,0,0,data.fadeAlpha))
+	end
 end
 
 
@@ -235,6 +255,7 @@ end
 
 local function SceneStart_CreateData() 
 	return { 
+
 		-- attribute 
 		layer=StartLayer_New(),
 		--call back 
@@ -244,9 +265,11 @@ local function SceneStart_CreateData()
 end
 
 function SceneStart_New()
+
 	local scene=Scene:create()
 	scene.data=SceneStart_CreateData()
 	return scene;
+
 end
 
 

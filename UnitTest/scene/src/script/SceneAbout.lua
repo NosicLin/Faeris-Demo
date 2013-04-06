@@ -170,7 +170,7 @@ local function MsgLayer_Create()
 	return layer;
 end
 
-function BackLayer_Create()
+local function BackLayer_Create()
 	local layer=Layer2D:create()
 	layer:setViewArea(0,0,960,640)
 
