@@ -22,6 +22,7 @@ quad2d.data={
 
 local c_quad=ColorQuad2D:create(Rect2D(-100,-100,200,200),Color.RED)
 c_quad:setPosition(300,-300,0);
+c_quad:setColor(Color.WHITE,ColorQuad2D.VERTEX_A)
 
 
 
@@ -49,7 +50,7 @@ local label=LabelTTF:create("This Is A Font",font);
 label:setPosition(-300,300,0)
 label.data={
 	onUpdate=function(self,dt)
-		self:rotateZ(dt/1000*10)
+		self:rotateZ(dt/1000*80)
 	end 
 	
 }

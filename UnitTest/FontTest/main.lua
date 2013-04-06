@@ -49,7 +49,7 @@ local staiyun_label20_50=LabelTTF:create("StaiYun Size 20,rotate 50",staiyun_20)
 staiyun_label20_50:setPosition(500,100,0)
 staiyun_label20_50:setRotateZ(50)
 
-local staiyun_label30_100=LabelTTF:create("StaiYun Size 30,rotate 50",staiyun_30)
+local staiyun_label30_100=LabelTTF:create("StaiYun Size 30,rotate 100",staiyun_30)
 staiyun_label30_100:setPosition(500,100,0)
 staiyun_label30_100:setRotateZ(100)
 

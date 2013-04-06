@@ -1,0 +1,25 @@
+local SceneAbout_mText=
+{
+	{
+		x=0,
+		y=0,
+		text="Faeris Game Studio"
+		size=20,
+		color=Color.WHITE,
+	},
+
+	{
+		x=0,
+		y=0,
+		text="http://www.faeris.com"
+		size=20,
+		color=Color.WHITE,
+	},
+	{
+		x=0,
+		y=0,
+		text="http://www.faeris.com"
+		size=20,
+		color=Color.WHITE,
+	},
+}
