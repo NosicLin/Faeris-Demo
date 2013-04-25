@@ -1,0 +1,25 @@
+win:{
+	width:480
+	height:800
+	caption:"SpriteTest"
+}
+
+game:{
+	name:"faeris"
+	version:"v1.0"
+}
+
+env:{
+
+}
+
+
+script:{
+	entry:"script/main.lua"
+}
+
+
+
+
+
+

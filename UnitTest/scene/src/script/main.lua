@@ -1,6 +1,6 @@
-dofile("script/SceneStart.lua")
-dofile("script/SceneAbout.lua")
-dofile("script/ScenePlay.lua")
+import("script/SceneStart.lua")
+import("script/SceneAbout.lua")
+import("script/ScenePlay.lua")
 
 util={}
 
