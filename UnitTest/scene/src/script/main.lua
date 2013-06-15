@@ -1,6 +1,6 @@
-import("script/SceneStart.lua")
-import("script/SceneAbout.lua")
-import("script/ScenePlay.lua")
+f_import("script/SceneStart.lua")
+f_import("script/SceneAbout.lua")
+f_import("script/ScenePlay.lua")
 
 util={}
 

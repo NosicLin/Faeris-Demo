@@ -1,1 +1,1 @@
-import("script/main.lua")
+f_import("script/main.lua")

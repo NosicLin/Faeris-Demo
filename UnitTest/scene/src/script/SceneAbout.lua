@@ -190,7 +190,6 @@ local function BackLayer_Create()
 		onTouchBegin=function(self,x,y)
 			x,y=self:toLayerCoord(x,y)
 			if label:hit2D(x,y) then 
-
 				share:director():pop()
 				return true
 			end
@@ -203,6 +202,7 @@ local function BackLayer_Create()
 end
 
 function SceneAbout_New()
+	collectgarbage("collect")
 	local scene=Scene:create()
 	local msg=MsgLayer_Create()
 	local back=BackLayer_Create()

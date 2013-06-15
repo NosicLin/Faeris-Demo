@@ -6,7 +6,6 @@ persion_info={
 		size="124m",
 		name="9#1306",
 	},
-
 	[0]="one",
 	"two",
 	"three",
@@ -19,18 +18,12 @@ f_savetable("normal.sav",persion_info)
 f_savetable("encrypt.sav",persion_info,"www.faeris.com")
 
 
-
-
 -- load information  
-
 normal=f_loadtable("normal.sav")
-
 f_utillog(f_tabletostring(normal))
 
 
-
 -- load encrypt information 
-
 encrypt=f_loadtable("encrypt.sav","www.faeris.com")
 f_utillog(f_tabletostring(normal))
 
