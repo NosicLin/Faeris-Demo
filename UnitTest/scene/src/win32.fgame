@@ -15,7 +15,7 @@ env:{
 
 
 script:{
-	entry:"script/main.lua"
+	entry:"main.lua"
 }
 
 

@@ -1,6 +1,6 @@
 win:{
-	width:1024
-	height:800
+	width:800
+	height:480
 	caption:"FontTest"
 }
 

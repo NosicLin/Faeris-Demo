@@ -111,6 +111,7 @@ end
 
 
 local function StartLayer_StartUpdate(self,dt)
+	print (dt)
 	self:update(dt) 
 	local total_frame=self.data.back_ground:getTotalFrame()
 	local cur_frame=self.data.back_ground:getCurFrame()
@@ -125,7 +126,6 @@ end
 
 
 local function StartLayer_UpdateSelect(self,dt)
-	print "select update"
 	self:update(dt)
 end
 
