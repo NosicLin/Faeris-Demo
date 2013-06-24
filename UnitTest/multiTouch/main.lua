@@ -52,6 +52,7 @@ end
 
 
 function NS_MulTouchLayer:onTouchesEnd(point_nu, event )
+	print("on touch end")
 	local id,x,y=event[0].id,event[0].x,event[0].y
 	local q=self.m_touchobj[id]
 	q:detach()

@@ -14,6 +14,7 @@ public class fgame  extends Fs_Activity
 	}
 	
 	static {
+		System.loadLibrary("fmodex");
         System.loadLibrary("faeris");
 
     }
