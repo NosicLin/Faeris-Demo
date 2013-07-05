@@ -6,9 +6,9 @@ function util.log(fmt,...)
 	print(string.format(fmt,...))
 end
 
-import("script/Bird.lua")
-import("script/HuntLayer.lua")
-import("script/PlayScene.lua")
+f_import("script/Bird.lua")
+f_import("script/HuntLayer.lua")
+f_import("script/PlayScene.lua")
 
 local scene=PlayScene:Create()
 
