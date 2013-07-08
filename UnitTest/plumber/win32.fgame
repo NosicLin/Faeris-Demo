@@ -1,0 +1,22 @@
+win:{
+	width:640
+	height:960
+	caption:"水管工人"
+}
+
+game:{
+	name:"faeris"
+	version:"v1.0"
+}
+
+env:{
+
+}
+
+
+script:{
+	entry:"script/main.lua"
+}
+
+
+

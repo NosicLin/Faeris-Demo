@@ -1,0 +1,22 @@
+win:{
+	width:320
+	height:480
+	caption:"Jigsaw"
+}
+
+game:{
+	name:"faeris"
+	version:"v1.0"
+}
+
+env:{
+
+}
+
+
+script:{
+	entry:"scripts/main.lua"
+}
+
+
+
