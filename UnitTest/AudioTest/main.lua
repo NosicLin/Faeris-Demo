@@ -1,12 +1,12 @@
 audioplayer=AudioEngine:create()
 
 
-audioplayer:loadSound("mainmenu.ogg")
+audioplayer:playBackgroundMusic("mainmenu.ogg",true)
 --audioplayer:playSound("mainmenu.ogg",-1)
 
 audios={
 	{
-		src="Burp07.wav",
+		src="Burp07.ogg",
 		icon="Music-icon.png",
 		x=48*1,
 		y=48*1,
@@ -14,7 +14,7 @@ audios={
 		height=48,
 	},
 	{
-		src="Cartoon_Sneeze.wav",
+		src="Cartoon_Sneeze.ogg",
 		icon="Music-icon.png",
 		x=48*2,
 		y=48*1,
@@ -22,7 +22,7 @@ audios={
 		height=48,
 	},
 	{
-		src="Male_Attack_Grunt01.wav",
+		src="Male_Attack_Grunt01.ogg",
 		icon="Music-icon.png",
 		x=48*3,
 		y=48*1,
@@ -30,7 +30,7 @@ audios={
 		height=48,
 	},
 	{
-		src="Wind_Loop01.wav",
+		src="Wind_Loop01.ogg",
 		icon="Music-icon.png",
 		x=48*4,
 		y=48*1,
@@ -38,7 +38,7 @@ audios={
 		height=48,
 	},
 	{
-		src="Wind_LowLoop1.wav",
+		src="Wind_LowLoop1.ogg",
 		icon="Music-icon.png",
 		x=48*5,
 		y=48*1,
@@ -99,10 +99,10 @@ layer.data={
 
 		if quad_background:hit2D(x,y) then 
 			if not background_play then  
-				background_channel=audioplayer:playSound("mainmenu.ogg",-1)
+				background_channel=audioplayer:resumeBackgroundMusic()
 				background_play=true
 			else 
-				audioplayer:stopChannel(background_channel);
+				audioplayer:pauseBackgroundMusic();
 				background_play=false
 			end
 			return true 
