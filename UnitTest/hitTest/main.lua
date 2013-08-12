@@ -1,7 +1,7 @@
 local director =share:director();
 local render=share:render()
 local scheduler=share:scheduler()
-scheduler:setFps(60)
+scheduler:setFps(500)
 
 --director:setAutoSwapBuffers(false);
 
@@ -89,9 +89,17 @@ layer.data={
 
 
 local scene=Scene:create()
+scene.data={
+	onUpdate=function(self,dt) 
+		self:update(dt)
+
+	end
+}
+
 
 
 scene:push(layer)
+
 
 director:run(scene);
 
