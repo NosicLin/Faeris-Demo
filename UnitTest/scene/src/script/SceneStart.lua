@@ -131,7 +131,7 @@ end
 
 local function StartLayer_ExitUpdate(self,dt)
 	local data=self.data
-	data.fadeAlpha=data.fadeAlpha+dt/1000*255
+	data.fadeAlpha=data.fadeAlpha+dt/1000*100
 	if data.fadeAlpha >255 then 
 		data.fadeAlpha=nil
 		data.fadeLayer=nil

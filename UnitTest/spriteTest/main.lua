@@ -12,6 +12,7 @@ local sprites={
 		color=Color.WHITE,
 		url="boy.fst",
 		animation="walk",
+		fps=3,
 		scale=3
 	},
 	{
@@ -86,6 +87,9 @@ for i=1,#sprites do
 		e:playAnimation(s.mode)
 	else
 		e:playAnimation()
+	end
+	if s.fps then 
+		e:setFps(s.fps)
 	end
 
 	layer:add(e)
