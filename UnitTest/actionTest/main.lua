@@ -17,7 +17,6 @@ q3:setColor(Color.RED)
 
 seq=SeqAction:create()
 
-seq:addAction(PauseAction:create(5))
 seq:addAction(MoveToAction:create(400,400,3))
 seq:addAction(ScaleToAction:create(2,2,4))
 seq:addAction(MoveByAction:create(0,60,2))

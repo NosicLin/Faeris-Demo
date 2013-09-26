@@ -1,12 +1,14 @@
 
+print("Create Http Engine Begin")
 http=HttpEngine:create()
+print("Create Http Engine End")
 
 
 request=HttpRequest:create()
 request:setUrl("www.baidu.com")
 
 request.data={                      
-	onReponse=function(code,data,err) 
+	onReponse=function(self,code,data,err) 
 		--print("data"..data)
 		f_log("reponse:"..code);
 		--f_utillog("code=%d,data=%s,err=%s",code,data,err);
@@ -20,6 +22,7 @@ request.data={
 		share:director():run(scene)
 	end
 }
+
 f_log("send request");
 
 http:send(request)
