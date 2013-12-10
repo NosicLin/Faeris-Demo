@@ -149,6 +149,13 @@ end
 
 local function StartLayer_CreateData()
 	local back_ground=Sprite2D:create("sprites/start.fst")
+	back_ground.data={
+		onUpdate=function(self,dt)
+			self:update(dt/1000)
+
+		end
+	}
+
 	local play=Quad2D:create("textures/play.png",122,43)
 	play:setPosition(480,240)
 	local quit=Quad2D:create("textures/quit.png",122,43)

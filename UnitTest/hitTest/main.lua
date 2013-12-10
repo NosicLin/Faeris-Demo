@@ -1,3 +1,4 @@
+share:scheduler():scheduleWithMiliSecond(true)
 local director =share:director();
 local render=share:render()
 local scheduler=share:scheduler()

@@ -19,3 +19,4 @@ share:director():run(scene)
 share:render():setClearColor(Color(155,155,155))
 
 
+share:scheduler():scheduleWithMiliSecond(true)

@@ -1,5 +1,6 @@
 GAME_WIDTH= 960
 GAME_HEIGHT=640
+share:scheduler():scheduleWithMiliSecond(true)
 
 util={}
 function util.log(fmt,...)

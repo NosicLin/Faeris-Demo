@@ -1,7 +1,12 @@
+f_import("fps.lua")
+
+
+
 local emitter=Particle2DEmitter:create("file.fpl")
 assert(emitter)
 
 local scene=Scene:create()
+
 local layer=Layer2D:create();
 
 local particle=Particle2DEffect:create(emitter)
@@ -30,6 +35,8 @@ end
 layer.onTouchMove=function(self,x,y)
 	local x,y= self:toLayerCoord(x,y)
 	particle:setPosition(x,y)
+end
+layer.onDraw1=function() 
 end
 
 layer:setTouchEnabled(true)

@@ -85,6 +85,8 @@ q3:doAction(seq2)
 
 
 
+local t=Test()
+t:printSelf()
 
 
 

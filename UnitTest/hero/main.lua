@@ -1,3 +1,4 @@
+share:scheduler():scheduleWithMiliSecond(true)
 scene=Scene:create()
 back_layer=Layer2D:create()
 role_layer=Layer2D:create()
@@ -22,7 +23,7 @@ role.data=
 	distancey=nil,
 
 	onUpdate=function(self,dt)
-		self:update(dt)
+		self:update(dt/1000)
 
 		local data=self.data
 

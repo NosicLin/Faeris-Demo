@@ -14,3 +14,5 @@ SN_JIGSAW:SetLevel(1)
 share:director():run(SN_START) 
 
 
+share:scheduler():scheduleWithMiliSecond(true)
+

@@ -1,36 +1,35 @@
 emitter:{
-	durationTime:1200 
-	durationTimeVar:10 
-	emitSpeed:500 
+	durationTime:100
+	durationTimeVar:10
+	emitSpeed:20
 	maxParticleNu:200
 }
 
-
 particle:{
-	lifeTime:2
+	lifeTime:5
 	lifeTimeVar:0 
-	startSize:10.0
-	startSizeVar:2.0
-	endSize:30
-	endSizeVar:3.0
 
-	startColor:[255,255,255,255]
-	startColorVar:[3,4,4,4]
+	startSize:20.0
+	startSizeVar:0.0
+	endSize:40.0
+	endSizeVar:0.0
+
+	startColor:[0,255,255,255]
+	startColorVar:[0,0,0,0]
 
 	endColor:[125,255,0,0]
 	endColorVar:[3,4,5,5]
 
-	angle:30 
-	angleVar:360
+	angle:90
+	angleVar:0
 
 	startRotation:10 
 	startRotationVar:20
 	endRotation:30
 	endRotationVar:0
 
-	position:[0,0]
-	positionVar:[0,0]
-
+	position:[-10,-10]
+	positionVar:[20,20]
 	moveMode:"free"
 }
 
@@ -44,22 +43,25 @@ texture:{
 
 environment:{
 	mode:"gravity"
-	gravity:{
-		speed:100
-		speedVar:0
-		gravity:[0,0]
 
-		radialAcceleration:100
+	gravity:{
+
+		speed:500
+		speedVar:0
+		gravity:[0,10]
+		radialAcceleration:1000
 		radialAccelerationVar:0
 		tangentialAcceleration:0
 		tangentialAccelerationVar:0
 	}
+
 	radial:{
-		startRadius:20
-		startRadiusVar:40
-		endRadius:40
-		endRadiusVar:-30
-		rotateSpeed:30
+		startRadius:400
+		startRadiusVar:0
+		endRadius:0
+		endRadiusVar:0
+
+		rotateSpeed:800
 		rotateSpeedVar:30
 	}
 }
