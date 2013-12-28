@@ -1,0 +1,30 @@
+win:{
+	width:800
+	height:480
+	caption:"FontTest"
+}
+
+game:{
+	name:"faeris"
+	version:"v1.0"
+}
+
+env:{
+
+}
+
+
+script:{
+	entry:"main.lua"
+}
+
+
+mgr:{
+	textureMgr:{
+		searchPath:["sss","fsfsf"]
+	}
+}
+
+
+
+
